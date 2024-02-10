@@ -1,12 +1,24 @@
 import java.io.File;  // Import the File class
 import java.io.FileWriter;  // Import FileWriter Class
 import java.io.IOException;  // Import the IOException class to handle errors
+import java.util.concurrent.locks.Lock;
 
 
 
 public class DiningPhilosophers {
 
   public static void main(String[] args) throws InterruptedException, IOException {
+    /* Usage details:
+    Enter either 0 or 5 args when running main
+    in order, these args should represent numbers convertable to integers, with *rl* being limited to 0 or 1
+      [np, nc, tt, et, rl]
+    as described in the readme in the assignment 1 folder. Should you enter no additional args, a base case will be appointed
+    implemented just below.
+
+    On running main, a file named "Trace.txt" will be created if not already, or overwritten if made, that will store all
+    logs for the philosophers. Any exceptions that occur during runtime will instead print to console.
+    */
+
     // For testing, if no inputs provided
     if(args.length == 0) {
       String[] temp = {"2", "3", "500", "500", "0"};

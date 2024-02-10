@@ -8,11 +8,11 @@ class Philosopher extends Thread {
   private Chopstick left, right;
   private boolean rightHanded;
   private Random random;
-  private int thinkCount;
   private int MaxCycles;
   private int MaxThinkingTime;
   private int MaxEatingTime;
   private FileWriter writer;
+  private long curTime;
 
   public Philosopher(String name, Chopstick left, Chopstick right, int MaxCycles, int MaxEatingTime, int MaxThinkingTime, boolean righthanded, FileWriter writer) {
     // Oh man that got long, hopefully you dont run too many philosophers at once, might hog a lot of memory.
@@ -24,15 +24,16 @@ class Philosopher extends Thread {
     this.MaxEatingTime = MaxEatingTime;
     this.MaxThinkingTime = MaxThinkingTime;
     this.writer = writer;
+
     random = new Random();
   }
 
   public void run() {
     try {
       int CurrentCycle = 0;
-      while(CurrentCycle < MaxCycles) {
+      do {
         // FINISH
-        long curTime = System.currentTimeMillis();
+        curTime = System.currentTimeMillis();
 
         // Eating
 
@@ -56,9 +57,9 @@ class Philosopher extends Thread {
               System.out.println("Failed to print line in Philosopher " + name);
               io.printStackTrace(); }
             
+            /*****************************************************************************************************************/
+            //inserted pause to force deadlock. Comment out if not desired, will not affect program
 
-            //FINISH
-            //Pause to force deadlock
             try {
               writer.write("Philosopher " + name + " WAITING TO FORCE DEADLOCK" + "\n");
             } catch (IOException io) {
@@ -66,6 +67,7 @@ class Philosopher extends Thread {
               io.printStackTrace(); }
             Thread.sleep(2000);
 
+            /*****************************************************************************************************************/
 
             // Prints wants left chopstick
             try {
@@ -195,7 +197,7 @@ class Philosopher extends Thread {
           // Increment Cycle Count
           ++CurrentCycle;
         }
-      }
+      } while(CurrentCycle != MaxCycles);
       try {
         writer.write("Philosopher " + name + " has finished their meal!!!!!!!!!!!!!!!!!!!!!!" + "\n");
       } catch (IOException io) {
@@ -203,5 +205,40 @@ class Philosopher extends Thread {
         io.printStackTrace();
       } 
     } catch(InterruptedException e) {}
+  }
+
+  // Interruption attempt
+  /*
+  Goal: Create a second thread that checks if the first thread is still valid to run
+  (invalid case being time is past the maximum allotted thinking time)
+
+  inputs: (OriginThread)
+  outputs: Void, but throw InterruptedException() on origin thread
+  ?? Return thread to allow for cancellation??
+  Create thread,
+  in origin thread, run this threads "run" function
+
+  run()
+    while (!(self.interrupted())) {
+      if(currenttime - GETtimelasteaten() >= MaxThinkingTime) {
+        OriginThread.interrupt()
+        self.interrupt()
+      }
+    }
+   */
+  private class MTC extends Thread {
+    private Thread t;
+    public MTC(Thread t) {
+      this.t = t;
+    }
+    
+    public void run() {
+      while(!interrupted()) {
+        if(System.currentTimeMillis() - curTime >= MaxEatingTime) {
+          t.interrupt();
+          interrupt();
+        }
+      }
+    }
   }
 }
