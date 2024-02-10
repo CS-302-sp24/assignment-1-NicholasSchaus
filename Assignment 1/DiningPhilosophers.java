@@ -1,7 +1,6 @@
 import java.io.File;  // Import the File class
 import java.io.FileWriter;  // Import FileWriter Class
 import java.io.IOException;  // Import the IOException class to handle errors
-import java.util.concurrent.locks.Lock;
 
 
 
@@ -21,7 +20,12 @@ public class DiningPhilosophers {
 
     // For testing, if no inputs provided
     if(args.length == 0) {
-      String[] temp = {"2", "3", "500", "500", "0"};
+      String[] temp = {"5", // Number of philosophers
+                        "0", // Number of cycles (how large their meal is) (0 runs forever/until deadlock)
+                        "500", // Max thinking time in ms (must be higher than max eating time, by a reasonable margin)
+                        "300", // Max eating time in ms
+                        "1" // Dominant Hand mix (0 or 1)
+                      };
       args = temp;
     }
 
@@ -65,8 +69,12 @@ public class DiningPhilosophers {
     }
     assert (DominantHand == 1 || DominantHand == 0);
     
-
-
+    //Print parameters to file as Header
+    traceWriter.write("Parameters:\n[np: " + Integer.toString(GatheringSize) + 
+                      ", nc: " + Integer.toString(MaxCycles) + 
+                      ", tt: " + Integer.toString(MaxThinkingTime) + 
+                      ", et: " + Integer.toString(MaxEatingTime) + 
+                      ", rl: " + Integer.toString(DominantHand) + "]\n\n");
 
     // Simulate philosophers
     Philosopher[] philosophers = new Philosopher[GatheringSize];

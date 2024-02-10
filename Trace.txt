@@ -1,0 +1,116 @@
+Parameters:
+[np: 5, nc: 0, tt: 500, et: 300, rl: 1]
+
+Philosopher 0 wants right chopstick
+Philosopher 1 wants left chopstick
+Philosopher 3 wants left chopstick
+Philosopher 4 wants right chopstick
+Philosopher 2 wants right chopstick
+Philosopher 2 has right chopstick
+Philosopher 0 has right chopstick
+Philosopher 4 has right chopstick
+Philosopher 4 wants left chopstick
+Philosopher 0 wants left chopstick
+Philosopher 2 wants left chopstick
+Philosopher 2 has left chopstick
+Philosopher 4 has left chopstick
+Philosopher 2 thought for 8 units of time
+Philosopher 4 thought for 9 units of time
+Philosopher 4 eats for 73 units
+Philosopher 2 eats for 59 units
+Philosopher 2 releases left chopstick
+Philosopher 2 releases right chopstick
+Philosopher 3 has left chopstick
+Philosopher 2 wants right chopstick
+Philosopher 3 wants right chopstick
+Philosopher 4 releases left chopstick
+Philosopher 4 releases right chopstick
+Philosopher 3 has right chopstick
+Philosopher 3 thought for 96 units of time
+Philosopher 3 eats for 277 units
+Philosopher 4 wants right chopstick
+Philosopher 0 has left chopstick
+Philosopher 0 thought for 108 units of time
+Philosopher 0 eats for 125 units
+Philosopher 0 releases left chopstick
+Philosopher 0 releases right chopstick
+Philosopher 4 has right chopstick
+Philosopher 1 has left chopstick
+Philosopher 4 wants left chopstick
+Philosopher 1 wants right chopstick
+Philosopher 0 wants right chopstick
+Philosopher 1 has right chopstick
+Philosopher 1 thought for 237 units of time
+Philosopher 1 eats for 58 units
+Philosopher 1 releases left chopstick
+Philosopher 1 releases right chopstick
+Philosopher 0 has right chopstick
+Philosopher 0 wants left chopstick
+Philosopher 1 wants left chopstick
+Philosopher 3 releases left chopstick
+Philosopher 3 releases right chopstick
+Philosopher 4 has left chopstick
+Philosopher 4 thought for 278 units of time
+Philosopher 3 wants left chopstick
+Philosopher 4 eats for 135 units
+Philosopher 2 has right chopstick
+Philosopher 2 wants left chopstick
+Philosopher 2 has left chopstick
+Philosopher 2 thought for 294 units of time
+Philosopher 2 eats for 254 units
+Philosopher 4 releases left chopstick
+Philosopher 4 releases right chopstick
+Philosopher 0 has left chopstick
+Philosopher 0 thought for 275 units of time
+Philosopher 0 eats for 248 units
+Philosopher 4 wants right chopstick
+Philosopher 2 releases left chopstick
+Philosopher 2 releases right chopstick
+Philosopher 3 has left chopstick
+Philosopher 3 wants right chopstick
+Philosopher 2 wants right chopstick
+Philosopher 3 has right chopstick
+Philosopher 3 thought for 256 units of time
+Philosopher 3 eats for 63 units
+Philosopher 3 releases left chopstick
+Philosopher 3 releases right chopstick
+Philosopher 3 wants left chopstick
+Philosopher 2 has right chopstick
+Philosopher 2 wants left chopstick
+Philosopher 2 has left chopstick
+Philosopher 2 thought for 65 units of time
+Philosopher 2 eats for 192 units
+Philosopher 0 releases left chopstick
+Philosopher 0 releases right chopstick
+Philosopher 4 has right chopstick
+Philosopher 4 wants left chopstick
+Philosopher 4 has left chopstick
+Philosopher 4 thought for 249 units of time
+Philosopher 4 eats for 24 units
+Philosopher 1 has left chopstick
+Philosopher 1 wants right chopstick
+Philosopher 0 wants right chopstick
+Philosopher 4 releases left chopstick
+Philosopher 4 releases right chopstick
+Philosopher 4 wants right chopstick
+Philosopher 4 has right chopstick
+Philosopher 4 wants left chopstick
+Philosopher 4 has left chopstick
+Philosopher 4 thought for 0 units of time
+Philosopher 4 eats for 29 units
+Philosopher 1 has Starved!!!!!!!!!!!!!!!!!!!!!!
+Philosopher 1 starved because they could not grab left chopstick!
+Philosopher 4 releases left chopstick
+Philosopher 4 releases right chopstick
+Philosopher 4 wants right chopstick
+Philosopher 4 has right chopstick
+Philosopher 4 wants left chopstick
+Philosopher 4 has left chopstick
+Philosopher 4 thought for 0 units of time
+Philosopher 4 eats for 146 units
+Philosopher 2 releases left chopstick
+Philosopher 2 releases right chopstick
+Philosopher 1 has right chopstick
+Philosopher 1 thought for 592 units of time
+Philosopher 3 has left chopstick
+Philosopher 1 eats for 84 units
